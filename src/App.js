@@ -11,7 +11,9 @@ class App extends Component {
         <br/>
         <div className="App">
          <TodoList />
+         <br></br>
         </div>
+        <a className="github" target="_blank" href="https://github.com/florianheysen/todo-list"><img src="/github.png"></img></a>
       </div>
     );
   }
