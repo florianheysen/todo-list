@@ -1,0 +1,203 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-feature-settings: "liga", "kern";
+          font-feature-settings: "liga", "kern";
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100%;
+  background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 10s ease infinite;
+	-moz-animation: Gradient 10s ease infinite;
+	animation: Gradient 10s ease infinite;
+}
+
+body {
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+h1 {
+  color:white;
+}
+
+p {
+  color: white;
+}
+
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+}
+button:focus {
+  outline: none;
+}
+button:hover {
+  cursor: pointer;
+}
+
+.app {
+  min-height: 50vh;
+  max-width:38vh; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1em;
+  background: #fff;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 22px 125px -10px rgba(0,0,0,0.11);
+  -moz-box-shadow: 0px 22px 125px -10px rgba(0,0,0,0.11);
+  box-shadow: 0px 22px 125px -10px rgba(0,0,0,0.11);
+}
+
+.btn {
+  font-size: 14px;
+  margin: 0 .5em;
+  border-radius: 2em;
+  padding: 0.75em 1.5em;
+  cursor: pointer;
+  background: none;
+  border: 1px solid;
+  letter-spacing: 1px;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #6b7cd8;
+  border: #6b7cd8 1px solid;
+  transition: 250ms ease-out;
+}
+
+.btn-del {
+  font-size: 14px;
+  margin: 0 .5em;
+  border-radius: 2em;
+  padding: 0.75em 1.5em;
+  cursor: pointer;
+  background: none;
+  border: 1px solid;
+  letter-spacing: 1px;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #E73C7E;
+  border: #E73C7E 1px solid;
+  transition: 250ms ease-out;
+}
+
+.btn-del:hover {
+  color: #fff;
+  background: #E73C7E;
+}
+
+.btn:hover, .btn:focus {
+  color: #fff;
+  background: #6b7cd8;
+}
+
+.form {
+  width: 100%;
+  padding: 1.5rem 1rem 0 1rem;
+  display: flex;
+}
+.form__input {
+  width: 100%;
+  font-size: 14px;
+  margin: 0 .5em;
+  border-radius: 2em;
+  padding: 0.75em 1.5em;
+  background: none;
+  font-family: "Source Sans Pro", sans-serif;
+  border: #e3e3e3 1px solid;
+  transition: border 250ms ease-out;
+}
+.form__input:focus {
+  border: #6b7cd8 1px solid;
+  outline: none;
+}
+
+.todo-list {
+  width: 100%;
+  padding: 0 1rem;
+  flex: 1;
+}
+.todo-list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5em;
+  margin-bottom: .5em;
+  border-radius: 3px;
+  transition: 200ms;
+  color: black;
+}
+.todo-list__item:last-child {
+  margin-bottom: 0;
+}
+.todo-list__item-content {
+  position: relative;
+}
+.todo-list__item-content:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #6b7cd8;
+  transition: 250ms ease-out;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: scalex(0);
+          transform: scalex(0);
+}
+
+
+/* Webkit Wallpaper */
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+/* End Webkit Wallpaper */
